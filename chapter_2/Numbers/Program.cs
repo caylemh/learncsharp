@@ -33,6 +33,17 @@ namespace Numbers
             // check the three variables have the same value
             Console.WriteLine($"{decimalNotation == binaryNotation}");
             Console.WriteLine($"{decimalNotation == hexadecimalNotation}\n");
+
+            // Exploring  number sizes
+            Console.WriteLine(
+                $"\nint uses {sizeof(int)} bytes and can store numbers in the range {int.MinValue:N0} -TO- {int.MaxValue:N0}."
+            );
+            Console.WriteLine(
+                $"double uses {sizeof(double)} bytes and can store numbers in the range {double.MinValue:N0} -TO- {double.MaxValue:N0}."
+            );
+            Console.WriteLine(
+                $"decimal uses {sizeof(decimal)} bytes and can store numbers in the range {decimal.MinValue:N0} -TO- {decimal.MaxValue:N0}.\n"
+            );
         }
     }
 }
