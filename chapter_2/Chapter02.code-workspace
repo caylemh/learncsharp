@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "Variables"
+		},
+		{
+			"path": "Arrays"
 		}
 	],
 	"settings": {}
