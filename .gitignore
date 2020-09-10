@@ -164,3 +164,5 @@ chapter_2/Formatting/obj/Debug/netcoreapp3.1/Formatting.dll
 chapter_2/Formatting/obj/Debug/netcoreapp3.1/Formatting.exe
 chapter_2/Formatting/obj/Debug/netcoreapp3.1/Formatting.genruntimeconfig.cache
 chapter_2/Formatting/obj/Debug/netcoreapp3.1/Formatting.pdb
+chapter_2/Formatting/.vscode/launch.json
+chapter_2/Formatting/.vscode/tasks.json

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using static System.Console;
+using System;
 
 namespace Formatting
 {
@@ -8,7 +9,7 @@ namespace Formatting
         {
             int numberOfApples =12;
             decimal pricePerApple = 0.35M;
-            Console.WriteLine(
+            WriteLine(
                 format: "{0} apples costs {1:C}",
                 arg0: numberOfApples,
                 arg1: pricePerApple * numberOfApples
@@ -21,7 +22,7 @@ namespace Formatting
             );
 
             // WriteToFile(formatted); // writes the string into a file
-            Console.WriteLine(formatted);
+            WriteLine(formatted);
 
             // Using interpolated strings
 
@@ -30,35 +31,46 @@ namespace Formatting
             string bananasText = "Bananas";
             int bananasCount = 56789;
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0,-8} {1, 6:N0}",
                 arg0: "Name",
                 arg1: "Count"
             );
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0,-8} {1, 6:N0}",
                 arg0: applesText,
                 arg1: applesCount
             );
 
-            Console.WriteLine(
+            WriteLine(
                 format: "{0,-8} {1, 6:N0}",
                 arg0: bananasText,
                 arg1: bananasCount
             );
 
-            // getting text input
-            Console.Write("\n\nType your firstname and press ENTER: ");
-            string firstname = Console.ReadLine();
+            // getting text input with ReadLine() method
+            Write("\n\nType your firstname and press ENTER: ");
+            string firstname = ReadLine();
 
-            Console.Write("Type your age and press ENTER: ");
-            int age = Int32.Parse(Console.ReadLine());
+            Write("Type your age and press ENTER: ");
+            int age = Int32.Parse(ReadLine());
 
-            Console.WriteLine(
+            WriteLine(
                 format: "Welcome {0} you are {1} years old.",
                 arg0: firstname,
                 arg1: age-7
+            );
+
+            // getting key input
+            Write("\nPress any key combination: ");
+            ConsoleKeyInfo key = ReadKey();
+            WriteLine();
+            WriteLine(
+                format: "Key: {0}, Char: {1}, Modifiers: {2}",
+                arg0: key.Key,
+                arg1: key.KeyChar,
+                arg2: key.Modifiers
             );
         }
     }
