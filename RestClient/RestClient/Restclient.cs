@@ -31,12 +31,12 @@ namespace RestClient
 
             request.Method = httpMethod.ToString();
 
-            using(HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            HttpWebResponse response = null;
+
+            try
             {
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new ApplicationException("Error Code: " + response.StatusCode.ToString());
-                }
+                response = (HttpWebResponse)request.GetResponse();
+
                 // Process the response stream... (could be JSON, XML or HTML, etc...)
 
             using (Stream responseStream = response.GetResponseStream())
@@ -51,7 +51,17 @@ namespace RestClient
                 } // End of using ResponseStream
 
             }// End of using response
-
+            catch(Exception ex)
+            {
+                strResponseValue = "{\"errorMessages\":{\"" + ex.Message.ToString() + "\"}, \"errors\":{}}";
+            }
+            finally
+            {
+                if(response != null)
+                {
+                    ((IDisposable)response).Dispose();
+                }               
+            }
 
             return strResponseValue;
         }

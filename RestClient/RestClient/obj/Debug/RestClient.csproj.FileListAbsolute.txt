@@ -8,3 +8,12 @@ C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\Res
 C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.csproj.CoreCompileInputs.cache
 C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.exe
 C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.pdb
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\bin\Debug\RestClient.exe.config
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\bin\Debug\RestClient.exe
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\bin\Debug\RestClient.pdb
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.Form1.resources
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.Properties.Resources.resources
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.csproj.GenerateResource.cache
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.csproj.CoreCompileInputs.cache
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.exe
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.pdb
