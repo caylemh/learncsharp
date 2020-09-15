@@ -1,0 +1,10 @@
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\bin\Debug\RestClient.exe.config
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\bin\Debug\RestClient.exe
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\bin\Debug\RestClient.pdb
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.csprojAssemblyReference.cache
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.Form1.resources
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.Properties.Resources.resources
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.csproj.GenerateResource.cache
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.csproj.CoreCompileInputs.cache
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.exe
+C:\Projects\Visual Studio\WindowsDesktopApps\RestClient\RestClient\obj\Debug\RestClient.pdb
