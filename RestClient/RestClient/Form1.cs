@@ -15,6 +15,7 @@ namespace RestClient
         public Form1()
         {
             InitializeComponent();
+
         }
 
         #region UI Event Handlers
@@ -26,7 +27,19 @@ namespace RestClient
             rClient.endPoint = txtRestURI.Text;
             //rClient.authTech = authenticationTechnique.RollYourOwn;
             //rClient.authType = authenticationType.Basic;
-            rClient.POSTJson = txtPOSTJson.Text;
+
+            switch(cboVerb.Text)
+            {
+                case "POST":
+                    rClient.httpMethod = httpverb.POST;
+                    rClient.postJSON = txtPOSTJson.Text;
+                    break;
+                default:
+                    rClient.httpMethod = httpverb.GET;
+                    break;
+            }
+
+            rClient.postJSON = txtPOSTJson.Text;
             rClient.userEmail = txtEmail.Text;
             rClient.userPswd = txtPswd.Text;
 
@@ -66,6 +79,18 @@ namespace RestClient
         private void CmdCopy_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Clipboard.SetText(txtResponse.Text);
+        }
+
+        private void CboVerb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboVerb.Text == "POST")
+            {
+                txtPOSTJson.Enabled = true;
+            }
+            else
+            {
+                txtPOSTJson.Enabled = false;
+            }
         }
     }
 }

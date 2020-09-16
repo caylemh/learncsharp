@@ -56,7 +56,7 @@
             // 
             // txtRestURI
             // 
-            this.txtRestURI.Location = new System.Drawing.Point(100, 12);
+            this.txtRestURI.Location = new System.Drawing.Point(100, 16);
             this.txtRestURI.Name = "txtRestURI";
             this.txtRestURI.Size = new System.Drawing.Size(334, 20);
             this.txtRestURI.TabIndex = 1;
@@ -76,7 +76,7 @@
             // cmdGo
             // 
             this.cmdGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdGo.Location = new System.Drawing.Point(605, 12);
+            this.cmdGo.Location = new System.Drawing.Point(604, 17);
             this.cmdGo.Name = "cmdGo";
             this.cmdGo.Size = new System.Drawing.Size(77, 20);
             this.cmdGo.TabIndex = 3;
@@ -130,6 +130,7 @@
             // 
             this.txtPOSTJson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPOSTJson.Enabled = false;
             this.txtPOSTJson.Location = new System.Drawing.Point(100, 47);
             this.txtPOSTJson.Multiline = true;
             this.txtPOSTJson.Name = "txtPOSTJson";
@@ -174,11 +175,12 @@
             this.cboVerb.Items.AddRange(new object[] {
             "GET",
             "POST"});
-            this.cboVerb.Location = new System.Drawing.Point(501, 11);
+            this.cboVerb.Location = new System.Drawing.Point(501, 16);
             this.cboVerb.Name = "cboVerb";
             this.cboVerb.Size = new System.Drawing.Size(81, 21);
             this.cboVerb.TabIndex = 13;
             this.cboVerb.Text = "GET";
+            this.cboVerb.SelectedIndexChanged += new System.EventHandler(this.CboVerb_SelectedIndexChanged);
             // 
             // label6
             // 

@@ -13,17 +13,6 @@ namespace RestClient
         DELETE
     }
 
-    public enum authenticationType
-    {
-        Basic,
-        NTLM
-    }
-
-    public enum authenticationTechnique
-    {
-        RollYourOwn,
-        NetworkCredential
-    }
 
     class RestClient
     {
@@ -31,28 +20,44 @@ namespace RestClient
         public httpverb httpMethod { get; set; }
         //public authenticationType authType { get; set; }
         //public authenticationTechnique authTech { get; set; }
-        public string POSTJson { get; set; }
+        public string postJSON { get; set; }
         public string userEmail { get; set; }
         public string userPswd { get; set; }
 
         public RestClient()
         {
-            endPoint = string.Empty;
-            httpMethod = httpverb.GET;    
+            endPoint = string.Empty;  
         }
 
+        #region Code for Request Methods
         public string makeRequest()
         {
             string strResponseValue = string.Empty;
-
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(endPoint);
-
             request.Method = httpMethod.ToString();
 
             // Adding the Autorization Header
             String authHeader = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(userEmail + ":" + userPswd));
             request.Headers.Add("Authorization", "Basic " + authHeader);
 
+            try //(request.Method == "POST" && postJSON != string.Empty)
+            {
+                request.Method = "POST";
+                request.ContentType = "application/json"; //Really Important
+                //request.ContentLength = 10;
+                using (StreamWriter swJSONPayload = new StreamWriter(request.GetRequestStream()))
+                {
+                    swJSONPayload.Write(postJSON);
+                    swJSONPayload.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                request.Method = "GET";
+                strResponseValue = ex.Message.ToString();
+            }
+
+            // Calling GetResponse
             HttpWebResponse response = null;
 
             try
@@ -86,6 +91,8 @@ namespace RestClient
             }
 
             return strResponseValue;
-        }
-    }
+
+        } // End of makeRequest
+        #endregion
+    } // End of Class
 }
