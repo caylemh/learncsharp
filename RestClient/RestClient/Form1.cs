@@ -25,7 +25,8 @@ namespace RestClient
 
             rClient.endPoint = txtRestURI.Text;
             //rClient.authTech = authenticationTechnique.RollYourOwn;
-            rClient.authType = authenticationType.Basic;
+            //rClient.authType = authenticationType.Basic;
+            rClient.POSTJson = txtPOSTJson.Text;
             rClient.userEmail = txtEmail.Text;
             rClient.userPswd = txtPswd.Text;
 
@@ -56,5 +57,15 @@ namespace RestClient
             }
         }
         #endregion
+
+        private void CmdClear_Click(object sender, EventArgs e)
+        {
+            txtResponse.Clear();
+        }
+
+        private void CmdCopy_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Clipboard.SetText(txtResponse.Text);
+        }
     }
 }

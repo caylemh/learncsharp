@@ -29,15 +29,16 @@ namespace RestClient
     {
         public string endPoint { get; set; }
         public httpverb httpMethod { get; set; }
-        public authenticationType authType { get; set; }
-        public authenticationTechnique authTech { get; set; }
+        //public authenticationType authType { get; set; }
+        //public authenticationTechnique authTech { get; set; }
+        public string POSTJson { get; set; }
         public string userEmail { get; set; }
         public string userPswd { get; set; }
 
         public RestClient()
         {
             endPoint = string.Empty;
-            httpMethod = httpverb.GET;
+            httpMethod = httpverb.GET;    
         }
 
         public string makeRequest()
@@ -48,8 +49,9 @@ namespace RestClient
 
             request.Method = httpMethod.ToString();
 
+            // Adding the Autorization Header
             String authHeader = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(userEmail + ":" + userPswd));
-            request.Headers.Add("Authorization", authType.ToString() + " " + authHeader);
+            request.Headers.Add("Authorization", "Basic " + authHeader);
 
             HttpWebResponse response = null;
 

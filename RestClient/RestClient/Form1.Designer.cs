@@ -37,14 +37,12 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPswd = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioOwn = new System.Windows.Forms.RadioButton();
-            this.radioNetCred = new System.Windows.Forms.RadioButton();
-            this.radioNTLM = new System.Windows.Forms.RadioButton();
-            this.radioBasicAuth = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.txtPOSTJson = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmdClear = new System.Windows.Forms.Button();
+            this.cmdCopy = new System.Windows.Forms.Button();
+            this.cboVerb = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,20 +63,22 @@
             // 
             // txtResponse
             // 
-            this.txtResponse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResponse.Location = new System.Drawing.Point(100, 190);
+            this.txtResponse.Location = new System.Drawing.Point(100, 200);
             this.txtResponse.Multiline = true;
             this.txtResponse.Name = "txtResponse";
             this.txtResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtResponse.Size = new System.Drawing.Size(422, 174);
+            this.txtResponse.Size = new System.Drawing.Size(581, 126);
             this.txtResponse.TabIndex = 2;
             // 
             // cmdGo
             // 
-            this.cmdGo.Location = new System.Drawing.Point(446, 12);
+            this.cmdGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdGo.Location = new System.Drawing.Point(605, 12);
             this.cmdGo.Name = "cmdGo";
-            this.cmdGo.Size = new System.Drawing.Size(77, 55);
+            this.cmdGo.Size = new System.Drawing.Size(77, 20);
             this.cmdGo.TabIndex = 3;
             this.cmdGo.Text = "GO!";
             this.cmdGo.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 190);
+            this.label2.Location = new System.Drawing.Point(15, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 4;
@@ -96,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 54);
+            this.label3.Location = new System.Drawing.Point(15, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(100, 47);
+            this.txtEmail.Location = new System.Drawing.Point(100, 174);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(132, 20);
             this.txtEmail.TabIndex = 6;
@@ -112,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(240, 54);
+            this.label4.Location = new System.Drawing.Point(240, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 7;
@@ -120,85 +120,86 @@
             // 
             // txtPswd
             // 
-            this.txtPswd.Location = new System.Drawing.Point(302, 47);
+            this.txtPswd.Location = new System.Drawing.Point(302, 174);
             this.txtPswd.Name = "txtPswd";
             this.txtPswd.PasswordChar = '*';
             this.txtPswd.Size = new System.Drawing.Size(132, 20);
             this.txtPswd.TabIndex = 8;
             // 
-            // groupBox1
+            // txtPOSTJson
             // 
-            this.groupBox1.Controls.Add(this.radioNetCred);
-            this.groupBox1.Controls.Add(this.radioOwn);
-            this.groupBox1.Location = new System.Drawing.Point(317, 82);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(205, 90);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Technique";
+            this.txtPOSTJson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPOSTJson.Location = new System.Drawing.Point(100, 47);
+            this.txtPOSTJson.Multiline = true;
+            this.txtPOSTJson.Name = "txtPOSTJson";
+            this.txtPOSTJson.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPOSTJson.Size = new System.Drawing.Size(581, 121);
+            this.txtPOSTJson.TabIndex = 9;
             // 
-            // groupBox2
+            // label5
             // 
-            this.groupBox2.Controls.Add(this.radioNTLM);
-            this.groupBox2.Controls.Add(this.radioBasicAuth);
-            this.groupBox2.Location = new System.Drawing.Point(101, 82);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(195, 90);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Auth Type";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "POST JSON:";
             // 
-            // radioOwn
+            // cmdClear
             // 
-            this.radioOwn.AutoSize = true;
-            this.radioOwn.Checked = true;
-            this.radioOwn.Location = new System.Drawing.Point(13, 23);
-            this.radioOwn.Name = "radioOwn";
-            this.radioOwn.Size = new System.Drawing.Size(93, 17);
-            this.radioOwn.TabIndex = 0;
-            this.radioOwn.TabStop = true;
-            this.radioOwn.Text = "Roll Your Own";
-            this.radioOwn.UseVisualStyleBackColor = true;
+            this.cmdClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdClear.Location = new System.Drawing.Point(100, 337);
+            this.cmdClear.Name = "cmdClear";
+            this.cmdClear.Size = new System.Drawing.Size(80, 30);
+            this.cmdClear.TabIndex = 11;
+            this.cmdClear.Text = "Clear";
+            this.cmdClear.UseVisualStyleBackColor = true;
+            this.cmdClear.Click += new System.EventHandler(this.CmdClear_Click);
             // 
-            // radioNetCred
+            // cmdCopy
             // 
-            this.radioNetCred.AutoSize = true;
-            this.radioNetCred.Location = new System.Drawing.Point(13, 46);
-            this.radioNetCred.Name = "radioNetCred";
-            this.radioNetCred.Size = new System.Drawing.Size(143, 17);
-            this.radioNetCred.TabIndex = 1;
-            this.radioNetCred.Text = "Network Credential Class";
-            this.radioNetCred.UseVisualStyleBackColor = true;
+            this.cmdCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdCopy.Location = new System.Drawing.Point(186, 337);
+            this.cmdCopy.Name = "cmdCopy";
+            this.cmdCopy.Size = new System.Drawing.Size(80, 30);
+            this.cmdCopy.TabIndex = 12;
+            this.cmdCopy.Text = "Copy";
+            this.cmdCopy.UseVisualStyleBackColor = true;
+            this.cmdCopy.Click += new System.EventHandler(this.CmdCopy_Click);
             // 
-            // radioNTLM
+            // cboVerb
             // 
-            this.radioNTLM.AutoSize = true;
-            this.radioNTLM.Location = new System.Drawing.Point(13, 46);
-            this.radioNTLM.Name = "radioNTLM";
-            this.radioNTLM.Size = new System.Drawing.Size(108, 17);
-            this.radioNTLM.TabIndex = 3;
-            this.radioNTLM.Text = "NTLM (Windows)";
-            this.radioNTLM.UseVisualStyleBackColor = true;
+            this.cboVerb.FormattingEnabled = true;
+            this.cboVerb.Items.AddRange(new object[] {
+            "GET",
+            "POST"});
+            this.cboVerb.Location = new System.Drawing.Point(501, 11);
+            this.cboVerb.Name = "cboVerb";
+            this.cboVerb.Size = new System.Drawing.Size(81, 21);
+            this.cboVerb.TabIndex = 13;
+            this.cboVerb.Text = "GET";
             // 
-            // radioBasicAuth
+            // label6
             // 
-            this.radioBasicAuth.AutoSize = true;
-            this.radioBasicAuth.Checked = true;
-            this.radioBasicAuth.Location = new System.Drawing.Point(13, 23);
-            this.radioBasicAuth.Name = "radioBasicAuth";
-            this.radioBasicAuth.Size = new System.Drawing.Size(122, 17);
-            this.radioBasicAuth.TabIndex = 2;
-            this.radioBasicAuth.TabStop = true;
-            this.radioBasicAuth.Text = "Basic Authentication";
-            this.radioBasicAuth.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(463, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Verb:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 378);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(697, 379);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cboVerb);
+            this.Controls.Add(this.cmdCopy);
+            this.Controls.Add(this.cmdClear);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPOSTJson);
             this.Controls.Add(this.txtPswd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEmail);
@@ -210,10 +211,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "C# REST Client";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,12 +227,12 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPswd;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioNetCred;
-        private System.Windows.Forms.RadioButton radioOwn;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioNTLM;
-        private System.Windows.Forms.RadioButton radioBasicAuth;
+        private System.Windows.Forms.TextBox txtPOSTJson;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button cmdClear;
+        private System.Windows.Forms.Button cmdCopy;
+        private System.Windows.Forms.ComboBox cboVerb;
+        private System.Windows.Forms.Label label6;
     }
 }
 
