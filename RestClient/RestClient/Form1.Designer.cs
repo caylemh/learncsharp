@@ -34,15 +34,15 @@
             this.cmdGo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPswd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioOwn = new System.Windows.Forms.RadioButton();
+            this.radioNetCred = new System.Windows.Forms.RadioButton();
+            this.radioNTLM = new System.Windows.Forms.RadioButton();
+            this.radioBasicAuth = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -98,16 +98,16 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "User Name:";
+            this.label3.Text = "User Email:";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtEmail.Location = new System.Drawing.Point(100, 47);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(132, 20);
+            this.txtEmail.TabIndex = 6;
             // 
             // label4
             // 
@@ -118,18 +118,18 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Password:";
             // 
-            // textBox2
+            // txtPswd
             // 
-            this.textBox2.Location = new System.Drawing.Point(302, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtPswd.Location = new System.Drawing.Point(302, 47);
+            this.txtPswd.Name = "txtPswd";
+            this.txtPswd.PasswordChar = '*';
+            this.txtPswd.Size = new System.Drawing.Size(132, 20);
+            this.txtPswd.TabIndex = 8;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioNetCred);
+            this.groupBox1.Controls.Add(this.radioOwn);
             this.groupBox1.Location = new System.Drawing.Point(317, 82);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(205, 90);
@@ -139,8 +139,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.radioNTLM);
+            this.groupBox2.Controls.Add(this.radioBasicAuth);
             this.groupBox2.Location = new System.Drawing.Point(101, 82);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(195, 90);
@@ -148,49 +148,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Auth Type";
             // 
-            // radioButton1
+            // radioOwn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(13, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Roll Your Own";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioOwn.AutoSize = true;
+            this.radioOwn.Checked = true;
+            this.radioOwn.Location = new System.Drawing.Point(13, 23);
+            this.radioOwn.Name = "radioOwn";
+            this.radioOwn.Size = new System.Drawing.Size(93, 17);
+            this.radioOwn.TabIndex = 0;
+            this.radioOwn.TabStop = true;
+            this.radioOwn.Text = "Roll Your Own";
+            this.radioOwn.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioNetCred
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(13, 46);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(147, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Network Credential CLass";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioNetCred.AutoSize = true;
+            this.radioNetCred.Location = new System.Drawing.Point(13, 46);
+            this.radioNetCred.Name = "radioNetCred";
+            this.radioNetCred.Size = new System.Drawing.Size(143, 17);
+            this.radioNetCred.TabIndex = 1;
+            this.radioNetCred.Text = "Network Credential Class";
+            this.radioNetCred.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioNTLM
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(13, 46);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(108, 17);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "NTLM (Windows)";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioNTLM.AutoSize = true;
+            this.radioNTLM.Location = new System.Drawing.Point(13, 46);
+            this.radioNTLM.Name = "radioNTLM";
+            this.radioNTLM.Size = new System.Drawing.Size(108, 17);
+            this.radioNTLM.TabIndex = 3;
+            this.radioNTLM.Text = "NTLM (Windows)";
+            this.radioNTLM.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioBasicAuth
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(13, 23);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(122, 17);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Basic Authentication";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioBasicAuth.AutoSize = true;
+            this.radioBasicAuth.Checked = true;
+            this.radioBasicAuth.Location = new System.Drawing.Point(13, 23);
+            this.radioBasicAuth.Name = "radioBasicAuth";
+            this.radioBasicAuth.Size = new System.Drawing.Size(122, 17);
+            this.radioBasicAuth.TabIndex = 2;
+            this.radioBasicAuth.TabStop = true;
+            this.radioBasicAuth.Text = "Basic Authentication";
+            this.radioBasicAuth.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -199,9 +199,9 @@
             this.ClientSize = new System.Drawing.Size(538, 378);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPswd);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmdGo);
@@ -227,15 +227,15 @@
         private System.Windows.Forms.Button cmdGo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPswd;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioNetCred;
+        private System.Windows.Forms.RadioButton radioOwn;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioNTLM;
+        private System.Windows.Forms.RadioButton radioBasicAuth;
     }
 }
 

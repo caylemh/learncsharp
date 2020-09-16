@@ -12,10 +12,27 @@ namespace RestClient
         PUT,
         DELETE
     }
+
+    public enum authenticationType
+    {
+        Basic,
+        NTLM
+    }
+
+    public enum authenticationTechnique
+    {
+        RollYourOwn,
+        NetworkCredential
+    }
+
     class RestClient
     {
         public string endPoint { get; set; }
         public httpverb httpMethod { get; set; }
+        public authenticationType authType { get; set; }
+        public authenticationTechnique authTech { get; set; }
+        public string userEmail { get; set; }
+        public string userPswd { get; set; }
 
         public RestClient()
         {
@@ -30,6 +47,9 @@ namespace RestClient
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(endPoint);
 
             request.Method = httpMethod.ToString();
+
+            String authHeader = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(userEmail + ":" + userPswd));
+            request.Headers.Add("Authorization", authType.ToString() + " " + authHeader);
 
             HttpWebResponse response = null;
 

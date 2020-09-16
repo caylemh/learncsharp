@@ -17,3 +17,4 @@ C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\R
 C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.csproj.CoreCompileInputs.cache
 C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.exe
 C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.pdb
+C:\Users\cayle\Documents\Code Base\learncsharp\RestClient\RestClient\obj\Debug\RestClient.csprojAssemblyReference.cache

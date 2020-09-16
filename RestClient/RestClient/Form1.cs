@@ -24,6 +24,10 @@ namespace RestClient
             RestClient rClient = new RestClient();
 
             rClient.endPoint = txtRestURI.Text;
+            //rClient.authTech = authenticationTechnique.RollYourOwn;
+            rClient.authType = authenticationType.Basic;
+            rClient.userEmail = txtEmail.Text;
+            rClient.userPswd = txtPswd.Text;
 
             debugOutput("REST Client Created");
 
@@ -36,6 +40,7 @@ namespace RestClient
 
         #endregion
 
+        #region Debug Output
         private void debugOutput(string strDebugText)
         {
             try
@@ -50,5 +55,6 @@ namespace RestClient
                 System.Diagnostics.Debug.Write(ex.Message, ToString() + Environment.NewLine);
             }
         }
+        #endregion
     }
 }
