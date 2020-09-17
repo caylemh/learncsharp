@@ -32,14 +32,18 @@ namespace RestClient
             {
                 case "POST":
                     rClient.httpMethod = httpverb.POST;
-                    rClient.postJSON = txtPOSTJson.Text;
+                    rClient.postJSON = txtJSONOut.Text;
+                    break;
+                case "PUT":
+                    rClient.httpMethod = httpverb.PUT;
+                    rClient.putJSON = txtJSONOut.Text;
                     break;
                 default:
                     rClient.httpMethod = httpverb.GET;
                     break;
             }
 
-            rClient.postJSON = txtPOSTJson.Text;
+            //rClient.postJSON = txtJSONOut.Text;
             rClient.userEmail = txtEmail.Text;
             rClient.userPswd = txtPswd.Text;
 
@@ -83,13 +87,13 @@ namespace RestClient
 
         private void CboVerb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cboVerb.Text == "POST")
+            if(cboVerb.Text == "POST" || cboVerb.Text == "PUT")
             {
-                txtPOSTJson.Enabled = true;
+                txtJSONOut.Enabled = true;
             }
             else
             {
-                txtPOSTJson.Enabled = false;
+                txtJSONOut.Enabled = false;
             }
         }
     }

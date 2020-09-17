@@ -37,7 +37,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPswd = new System.Windows.Forms.TextBox();
-            this.txtPOSTJson = new System.Windows.Forms.TextBox();
+            this.txtJSONOut = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmdClear = new System.Windows.Forms.Button();
             this.cmdCopy = new System.Windows.Forms.Button();
@@ -126,17 +126,17 @@
             this.txtPswd.Size = new System.Drawing.Size(132, 20);
             this.txtPswd.TabIndex = 8;
             // 
-            // txtPOSTJson
+            // txtJSONOut
             // 
-            this.txtPOSTJson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtJSONOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPOSTJson.Enabled = false;
-            this.txtPOSTJson.Location = new System.Drawing.Point(100, 47);
-            this.txtPOSTJson.Multiline = true;
-            this.txtPOSTJson.Name = "txtPOSTJson";
-            this.txtPOSTJson.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPOSTJson.Size = new System.Drawing.Size(581, 121);
-            this.txtPOSTJson.TabIndex = 9;
+            this.txtJSONOut.Enabled = false;
+            this.txtJSONOut.Location = new System.Drawing.Point(100, 47);
+            this.txtJSONOut.Multiline = true;
+            this.txtJSONOut.Name = "txtJSONOut";
+            this.txtJSONOut.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtJSONOut.Size = new System.Drawing.Size(581, 121);
+            this.txtJSONOut.TabIndex = 9;
             // 
             // label5
             // 
@@ -174,7 +174,8 @@
             this.cboVerb.FormattingEnabled = true;
             this.cboVerb.Items.AddRange(new object[] {
             "GET",
-            "POST"});
+            "POST",
+            "PUT"});
             this.cboVerb.Location = new System.Drawing.Point(501, 16);
             this.cboVerb.Name = "cboVerb";
             this.cboVerb.Size = new System.Drawing.Size(81, 21);
@@ -201,7 +202,7 @@
             this.Controls.Add(this.cmdCopy);
             this.Controls.Add(this.cmdClear);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPOSTJson);
+            this.Controls.Add(this.txtJSONOut);
             this.Controls.Add(this.txtPswd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEmail);
@@ -229,7 +230,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPswd;
-        private System.Windows.Forms.TextBox txtPOSTJson;
+        private System.Windows.Forms.TextBox txtJSONOut;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button cmdClear;
         private System.Windows.Forms.Button cmdCopy;

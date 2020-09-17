@@ -21,6 +21,7 @@ namespace RestClient
         //public authenticationType authType { get; set; }
         //public authenticationTechnique authTech { get; set; }
         public string postJSON { get; set; }
+        public string putJSON { get; set; }
         public string userEmail { get; set; }
         public string userPswd { get; set; }
 
@@ -40,7 +41,8 @@ namespace RestClient
             String authHeader = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(userEmail + ":" + userPswd));
             request.Headers.Add("Authorization", "Basic " + authHeader);
 
-            if(request.Method == "POST" && postJSON != string.Empty)
+            #region --- POST Request Method ---
+            if (request.Method == "POST" && postJSON != string.Empty)
             {
                 request.Method = "POST";
                 request.ContentType = "application/json"; //Really Important
@@ -51,8 +53,23 @@ namespace RestClient
                     swJSONPayload.Close();
                 }
             }
-            
-            // Calling GetResponse
+            #endregion
+
+            #region --- PUT Request Method ---
+            if (request.Method == "PUT" && putJSON != string.Empty)
+            {
+                request.Method = "PUT";
+                request.ContentType = "application/json"; //Really Important
+                //request.ContentLength = 10;
+                using (StreamWriter swJSONPayload = new StreamWriter(request.GetRequestStream()))
+                {
+                    swJSONPayload.Write(postJSON);
+                    swJSONPayload.Close();
+                }
+            }
+            #endregion
+
+            #region --- Calling GetResponse ---
             HttpWebResponse response = null;
 
             try
@@ -84,6 +101,7 @@ namespace RestClient
                     ((IDisposable)response).Dispose();
                 }               
             }
+            #endregion
 
             return strResponseValue;
 
