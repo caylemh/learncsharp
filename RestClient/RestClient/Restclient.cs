@@ -40,7 +40,7 @@ namespace RestClient
             String authHeader = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(userEmail + ":" + userPswd));
             request.Headers.Add("Authorization", "Basic " + authHeader);
 
-            try //(request.Method == "POST" && postJSON != string.Empty)
+            if(request.Method == "POST" && postJSON != string.Empty)
             {
                 request.Method = "POST";
                 request.ContentType = "application/json"; //Really Important
@@ -51,12 +51,7 @@ namespace RestClient
                     swJSONPayload.Close();
                 }
             }
-            catch (Exception ex)
-            {
-                request.Method = "GET";
-                strResponseValue = ex.Message.ToString();
-            }
-
+            
             // Calling GetResponse
             HttpWebResponse response = null;
 
